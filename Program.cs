@@ -1,8 +1,4 @@
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Vehicles_API.Data;
 using Vehicles_API.Helpers;
 using Vehicles_API.Interfaces;
@@ -13,41 +9,41 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddDbContext<VehicleContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
-{
-    options.Password.RequireDigit = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequireUppercase = true;
-    options.Password.RequiredLength = 6;
+// builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+// {
+//     options.Password.RequireDigit = true;
+//     options.Password.RequireLowercase = true;
+//     options.Password.RequireUppercase = true;
+//     options.Password.RequiredLength = 6;
 
-    options.Lockout.MaxFailedAccessAttempts = 5;
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
-}).AddEntityFrameworkStores<VehicleContext>();
+//     options.Lockout.MaxFailedAccessAttempts = 5;
+//     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+// }).AddEntityFrameworkStores<VehicleContext>();
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("apiKey"))
-        ),
-        ValidateLifetime = true,
-        ValidateAudience = false,
-        ValidateIssuer = false,
-        ClockSkew = TimeSpan.Zero
-    };
-});
+// builder.Services.AddAuthentication(options =>
+// {
+//     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+// }).AddJwtBearer(options =>
+// {
+//     options.TokenValidationParameters = new TokenValidationParameters
+//     {
+//         ValidateIssuerSigningKey = true,
+//         IssuerSigningKey = new SymmetricSecurityKey(
+//             Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("apiKey"))
+//         ),
+//         ValidateLifetime = true,
+//         ValidateAudience = false,
+//         ValidateIssuer = false,
+//         ClockSkew = TimeSpan.Zero
+//     };
+// });
 
-builder.Services.AddAuthorization(options =>
-    options.AddPolicy("Admins", policy => policy.RequireClaim("Administrator"))
-);
+// builder.Services.AddAuthorization(options =>
+//     options.AddPolicy("Admins", policy => policy.RequireClaim("Administrator"))
+// );
 
 // Dependency injection configuration
 builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
@@ -90,7 +86,7 @@ app.UseHttpsRedirection();
 
 app.UseCors(corsProfile);
 
-app.UseAuthentication();
+// app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

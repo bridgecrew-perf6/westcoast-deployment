@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Vehicles_API.Models;
-using Vehicles_API.ViewModels;
 using Vehicles_API.ViewModels.Vehicle;
 
 namespace Vehicles_API.Data
@@ -19,7 +14,7 @@ namespace Vehicles_API.Data
             var makeData = await File.ReadAllTextAsync("Data/make.json");
             var manufacturers = JsonSerializer.Deserialize<List<Manufacturer>>(makeData);
 
-            await context.AddRangeAsync(manufacturers!);
+            await context.Manufacturers.AddRangeAsync(manufacturers!);
             await context.SaveChangesAsync();
 
         }
@@ -34,7 +29,7 @@ namespace Vehicles_API.Data
 
             foreach (var vehicle in vehicles)
             {
-                var manufacturer = await context.Manufacturers.SingleOrDefaultAsync(m => m.Name.ToLower() == vehicle.Manufacturer!.ToLower());
+                var manufacturer = await context.Manufacturers.Where(m => m.Name.ToLower() == vehicle.Manufacturer!.ToLower()).SingleOrDefaultAsync();
                 if (manufacturer is not null)
                 {
                     var newVehicle = new Vehicle

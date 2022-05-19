@@ -1,7 +1,7 @@
 [
     {
         "RegNo": "ABC123",
-        "Make": "Chevrolet",
+        "Manufacturer": "Chevrolet",
         "Model": "Corvette",
         "ModelYear": 2015,
         "ImageUrl": "https://i.postimg.cc/N09fbtKZ/car1.jpg",
@@ -11,7 +11,7 @@
     },
     {
         "RegNo": "DEF345",
-        "Make": "Ford",
+        "Manufacturer": "Ford",
         "Model": "Mustang",
         "ModelYear": 2017,
         "ImageUrl": "https://i.postimg.cc/Fsy2yyh8/car2.jpg",
@@ -21,7 +21,7 @@
     },
     {
         "RegNo": "GHI678",
-        "Make": "Porsche",
+        "Manufacturer": "Porsche",
         "Model": "Alpine",
         "ModelYear": 1967,
         "ImageUrl": "https://i.postimg.cc/85xqHwJQ/car3.jpg",
@@ -31,7 +31,7 @@
     },
     {
         "RegNo": "JKL901",
-        "Make": "Mercedes",
+        "Manufacturer": "Mercedes",
         "Model": "S500",
         "ModelYear": 2019,
         "ImageUrl": "https://i.postimg.cc/MHRgrRVc/car4.jpg",
@@ -41,7 +41,7 @@
     },
     {
         "RegNo": "MNO902",
-        "Make": "Mercedes",
+        "Manufacturer": "Mercedes",
         "Model": "AMG",
         "ModelYear": 2014,
         "ImageUrl": "https://i.postimg.cc/wj9n01vv/car5.jpg",
@@ -51,7 +51,7 @@
     },
     {
         "RegNo": "PGQ123",
-        "Make": "Audi",
+        "Manufacturer": "Audi",
         "Model": "A6",
         "ModelYear": 2013,
         "ImageUrl": "https://i.postimg.cc/TYMz57vn/car6.jpg",
@@ -61,7 +61,7 @@
     },
     {
         "RegNo": "RST456",
-        "Make": "Volvo",
+        "Manufacturer": "Volvo",
         "Model": "V60",
         "ModelYear": 2013,
         "ImageUrl": "https://i.postimg.cc/s2XqCb5C/car15.jpg",
@@ -71,7 +71,7 @@
     },
     {
         "RegNo": "UVX789",
-        "Make": "Volvo",
+        "Manufacturer": "Volvo",
         "Model": "XC40",
         "ModelYear": 2013,
         "ImageUrl": "https://i.postimg.cc/rwJ2kSbx/car8.jpg",
@@ -81,7 +81,7 @@
     },
     {
         "RegNo": "YZA012",
-        "Make": "Volvo",
+        "Manufacturer": "Volvo",
         "Model": "V40",
         "ModelYear": 2013,
         "ImageUrl": "https://i.postimg.cc/g0t9wGG0/car9.jpg",
@@ -91,7 +91,7 @@
     },
     {
         "RegNo": "BAC013",
-        "Make": "Audi",
+        "Manufacturer": "Audi",
         "Model": "A6",
         "ModelYear": 2018,
         "ImageUrl": "https://i.postimg.cc/FRYM3wKV/car10.jpg",
@@ -101,7 +101,7 @@
     },
     {
         "RegNo": "BCA103",
-        "Make": "Ferrari",
+        "Manufacturer": "Ferrari",
         "Model": "458",
         "ModelYear": 2013,
         "ImageUrl": "https://i.postimg.cc/B6PzXDhh/car11.jpg",
@@ -111,7 +111,7 @@
     },
     {
         "RegNo": "CEZ420",
-        "Make": "Lambourghini",
+        "Manufacturer": "Lambourghini",
         "Model": "Aventador",
         "ModelYear": 2013,
         "ImageUrl": "https://i.postimg.cc/25KJkTxb/car12.jpg",
@@ -121,7 +121,7 @@
     },
     {
         "RegNo": "EGH956",
-        "Make": "Chevrolet",
+        "Manufacturer": "Chevrolet",
         "Model": "Impala",
         "ModelYear": 1958,
         "ImageUrl": "https://i.postimg.cc/6p61CFj4/car13.jpg",
@@ -131,7 +131,7 @@
     },
     {
         "RegNo": "HFY666",
-        "Make": "Volkswagen",
+        "Manufacturer": "Volkswagen",
         "Model": "Tiguan",
         "ModelYear": 2016,
         "ImageUrl": "https://i.postimg.cc/GmzVNb8j/car14.jpg",
@@ -141,7 +141,7 @@
     },
     {
         "RegNo": "ZCS469",
-        "Make": "Volvo",
+        "Manufacturer": "Volvo",
         "Model": "V60",
         "ModelYear": 2020,
         "ImageUrl": "https://i.postimg.cc/DzwkySkD/car7.jpg",
