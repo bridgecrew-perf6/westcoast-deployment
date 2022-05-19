@@ -24,7 +24,6 @@ namespace Vehicles_API.Controllers
         }
 
         [HttpGet("list")]
-        [Authorize()]
         public async Task<ActionResult<List<VehicleViewModel>>> ListVehicles() => Ok(await _vehicleRepo.ListAllVehiclesAsync());
 
         // Replaced with the method ListManufacturerWithVehicles(int id)
