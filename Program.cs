@@ -63,8 +63,8 @@ builder.Services.AddCors(options =>
             policy.AllowAnyHeader();
             policy.AllowAnyMethod();
             policy.WithOrigins(
-                "http://127.0.0.1:5500",
-                "http://localhost:3000");
+                "http://localhost:3000",
+                "http://127.0.0.1:5500");
         });
 });
 
