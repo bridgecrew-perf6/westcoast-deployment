@@ -52,12 +52,12 @@ builder.Services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
 // Automapper
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
-var corsProfile = "WestCoastCors";
+// var corsProfile = "WestCoastCors";
 
 // CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(corsProfile,
+    options.AddPolicy("WestCoastCors",
         policy =>
         {
             policy.AllowAnyHeader();
@@ -84,7 +84,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(corsProfile);
+app.UseCors("WestCoastCors");
 
 // app.UseAuthentication();
 app.UseAuthorization();
